@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>파라미터</title>
+</head>
+<body>
+<h1>파라미터</h1>
+<form action="Login" method="get">
+
+</form>
+
+</body>
+</html>

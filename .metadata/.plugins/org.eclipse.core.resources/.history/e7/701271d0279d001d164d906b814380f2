@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>getParameterValues</title>
+</head>
+<body>
+<h1>파라미터</h1>
+	<form action="Sport" method="post">
+		<fieldset>
+			<legend>좋아하는 운동 및 성별</legend>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>				
+			</ul>
+		</fieldset>
+	
+	</form>
+</body>
+</html>
