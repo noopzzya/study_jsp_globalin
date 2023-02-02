@@ -1,0 +1,17 @@
+package com.jdbc;
+
+public class TempMemberDAO {
+
+	private final String JDBC_DRIVER="";
+	
+	public TempMemberDAO() {
+		
+		try {
+			Class.forName(JDBC_DRIVER);
+		} catch (Exception e) {
+			System.out.println("Error : JDBC 드라이버 로딩 실패!!");
+		}
+			
+	}
+	
+}

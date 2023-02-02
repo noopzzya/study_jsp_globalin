@@ -1,0 +1,77 @@
+package com.jdbc;
+
+import java.sql.*;
+import java.util.*;
+
+public class TempMemberDAO {
+
+	private final String JDBC_DRIVER="";
+	
+	public TempMemberDAO() {
+		
+		try {
+			Class.forName(JDBC_DRIVER);
+		} catch (Exception e) {
+			System.out.println("Error : JDBC 드라이버 로딩 실패!!");
+		}
+			
+	}
+	
+	public Vector<TempMember> getMemberList() {
+		
+		Connection conn = null;
+		Statement stmt = null;
+		ResultSet rs = null;
+				
+		Vector<TempMember> vecList = new Vector<TempMember>();
+		
+		try {
+			conn = DriverManager.getConnection(
+					"jdbc:oracle:thin:@localhost:1521:orcl",
+					"scott", "tiger");
+			
+			stmt = conn.createStatement();
+			rs = stmt.executeQuery("SELECT * FROM tempmember");
+			
+			while(rs.next()) {
+				TempMember vo = new TempMember();
+				vo.setId(rs.getString("id"));
+				vo.setId(rs.getString("passwd"));
+				vo.setId(rs.getString("name"));
+				vo.setId(rs.getString("mem_num1"));
+				vo.setId(rs.getString("mem_num2"));
+				vo.setId(rs.getString("e_mail"));
+				vo.setId(rs.getString("phone"));
+				vo.setId(rs.getString("zipcode"));
+				vo.setId(rs.getString("address"));
+				vo.setId(rs.getString("job"));
+				
+				vecList.add(vo);
+			}
+			
+		} catch(SQLException ss){
+			//ss.printStackTrace();
+			System.out.println("SQL exception");
+		} catch(Exception ee){
+			System.out.println("Exception");
+		} finally{
+			
+			if(rs != null)
+				try{
+					rs.close();
+				}catch(SQLException ex){}
+			
+			if(stmt != null)
+				try{
+					stmt.close();
+				}catch(SQLException ex){}
+			
+			if(conn != null)
+				try{
+					conn.close();
+				}catch(SQLException ex){}
+		}
+		return vecList;
+	}
+	
+}

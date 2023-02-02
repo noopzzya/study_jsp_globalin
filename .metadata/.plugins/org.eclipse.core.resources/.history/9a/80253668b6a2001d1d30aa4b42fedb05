@@ -1,0 +1,11 @@
+package com.jdbc;
+
+public class TempMemberDAO {
+
+	private final String JDBC_DRIVER="";
+	
+	public TempMemberDAO() {
+		
+	}
+	
+}
