@@ -1,0 +1,19 @@
+package com.jdbc;
+
+import java.sql.*;
+
+public class ConnUtil {
+
+	public Connection getConnection() {
+		
+		Connection con = null;
+				
+		try {
+			
+		} catch (Exception e) {
+			
+		}
+		
+	}
+	
+}

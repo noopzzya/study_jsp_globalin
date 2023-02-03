@@ -4,7 +4,8 @@ import java.sql.*;
 import java.util.*;
 
 public class TempMemberDAO {
-
+	
+/* context.xml 추가하여 주석 처리
 	private final String JDBC_DRIVER="oracle.jdbc.driver.OracleDriver";
 	private final String JDBC_URL = "jdbc:oracle:thin:@localhost:1521:orcl";
 	private final String USER = "scott";
@@ -19,7 +20,7 @@ public class TempMemberDAO {
 		}
 			
 	}
-	
+*/	
 	public Vector<TempMember> getMemberList() {
 		
 		Connection conn = null;
@@ -29,7 +30,10 @@ public class TempMemberDAO {
 		Vector<TempMember> vecList = new Vector<TempMember>();
 		
 		try {
-			conn = DriverManager.getConnection( JDBC_URL, USER, PASSWD);					
+			//conn = DriverManager.getConnection(JDBC_URL, USER, PASSWD);
+			ConnUtil  co = new ConnUtil();
+			conn = co.getConnection();
+			
 			String sql = "SELECT * FROM tempmember";
 			stmt = conn.createStatement();
 			rs = stmt.executeQuery(sql);

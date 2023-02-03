@@ -106,7 +106,7 @@ xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/
  -->
  
  
- <!-- error404, 500, null
+ <!-- error404, 500, null -->
 	 <error-page>
 	 	<error-code>404</error-code>
 	 	<location>/error/error404</location>
@@ -121,9 +121,9 @@ xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/
 	 	<exception-type>java.lang.NullPointerException</exception-type>
 	 	<location>/error/errorNullPointer.jsp</location>
 	 </error-page>
- -->
+
  
-  <!-- appEx1 -->
+  <!-- appEx1
   <context-param>
   	<param-name>company</param-name>
   	<param-value>Globalin</param-value>
@@ -133,5 +133,6 @@ xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/
   	<param-name>manager</param-name>
   	<param-value>아몬드</param-value>
   </context-param>
- 
+ -->
+
 </web-app>
