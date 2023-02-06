@@ -43,3 +43,7 @@
 0:0:0:0:0:0:0:1 - - [03/Feb/2023:15:11:32 +0900] "GET /memberone/script.js HTTP/1.1" 200 215
 0:0:0:0:0:0:0:1 - - [03/Feb/2023:15:11:37 +0900] "GET /memberone/idCheck.jsp?id=aa HTTP/1.1" 200 362
 0:0:0:0:0:0:0:1 - - [03/Feb/2023:15:17:44 +0900] "GET /directive/includeEx.jsp HTTP/1.1" 500 -
+127.0.0.1 - - [03/Feb/2023:15:28:01 +0900] "GET / HTTP/1.1" 404 -
+0:0:0:0:0:0:0:1 - - [03/Feb/2023:15:28:02 +0900] "GET /directive/includeEx.jsp HTTP/1.1" 500 -
+0:0:0:0:0:0:0:1 - - [03/Feb/2023:15:49:44 +0900] "GET /directive/includeEx.jsp HTTP/1.1" 200 619
+0:0:0:0:0:0:0:1 - - [03/Feb/2023:16:13:40 +0900] "GET /directive/includeEx.jsp HTTP/1.1" 200 615

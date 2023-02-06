@@ -6,10 +6,11 @@
 <meta charset="UTF-8">
 <title>Register Form</title>
 <link href="style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="script.js"></script>
 </head>
 <body>
-<form action="" method="post" name="regForm">
-<script type="text/javascript" src="script.js"></script>
+<form action="regProc.jsp" method="post" name="regForm">
+
 <table border="1">
 
 	<tr>
@@ -64,7 +65,7 @@
 	<tr>
 		<td align="right">이메일</td>
 		<td>
-			<input type="text" name="emal">	
+			<input type="text" name="email">	
 		</td>
 	</tr>
 	
@@ -72,7 +73,7 @@
 		<td align="right">우편번호</td>
 		<td>
 			<input type="text" name="zipcode">
-			<input type="button" value="찾기" onclick="#">		
+			<input type="button" value="찾기" onclick="zipCheck()">
 		</td>
 	</tr>
 
@@ -92,8 +93,8 @@
 
 	<tr>
 		<td colspan="2" align="center">
-			<input type="button" value="회원가입" onclick="#" >&nbsp;&nbsp;
-			<input type="s" value="다시입력">
+			<input type="button" value="회원가입" onclick="inputCheck()" >&nbsp;&nbsp;
+			<input type="reset" value="다시입력">
 		</td>
 	</tr>
 
