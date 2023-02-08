@@ -1,0 +1,35 @@
+@charset "UTF-8";
+body {
+	font-size: 9pt; 
+	color: black; 
+	line-height: 160%;
+	font-family: 굴림, verdana, tahoma;
+}
+
+td {
+	font-size: 9pt; 
+	color: black; 
+	line-height: 160%;
+	font-family: 굴림, verdana, tahoma;
+}
+
+select {
+	font-size: 9pt; 
+	color: black; 
+	line-height: 160%;
+	font-family: 굴림, verdana, tahoma;
+}
+
+div {
+	font-size: 9pt; 
+	color: black; 
+	line-height: 160%;
+	font-family: 굴림, verdana, tahoma;
+}
+
+form {
+	font-size: 9pt; 
+	color: black; 
+	line-height: 160%;
+	font-family: 굴림, verdana, tahoma;
+}

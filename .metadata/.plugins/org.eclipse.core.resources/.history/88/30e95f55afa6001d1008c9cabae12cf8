@@ -1,0 +1,13 @@
+package com.boardone;
+
+public class BoardDAO {
+
+	private static BoardDAO instance = null;
+	
+	private BoardDAO() {}
+
+	public static BoardDAO getInstance() {
+		return instance;
+	}
+		
+}
