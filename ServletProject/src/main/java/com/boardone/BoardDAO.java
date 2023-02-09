@@ -145,25 +145,26 @@ public class BoardDAO {
 	
 	
 	// 데이터 목록을 가져오는 메소드
-	  public List<BoardVO> getArticles(){
+	public List<BoardVO> getArticles(){
 	      
-	      Connection conn = null;
-	      PreparedStatement pstmt = null;
-	      ResultSet rs = null;
-	      List<BoardVO> articleList = null;
+	    Connection conn = null;
+	    PreparedStatement pstmt = null;
+	    ResultSet rs = null;
+	    List<BoardVO> articleList = null;
 	      
-	      try {
-	         conn = ConnUtil.getConnection();
-	         String sql = "select * from board order by num desc";
-	         pstmt = conn.prepareStatement(sql);
-	         rs = pstmt.executeQuery();
+	    try {
+	        conn = ConnUtil.getConnection();
+	        String sql = "select * from board order by num desc";
+	        pstmt = conn.prepareStatement(sql);
+	        rs = pstmt.executeQuery();
 	         
-	         if(rs.next()) {
+	        if(rs.next()) {
 	            
 	            articleList = new ArrayList<BoardVO>();
 	            
 	            do {
 	               BoardVO article = new BoardVO();
+	               
 	               article.setNum(rs.getInt("num"));
 	               article.setWriter(rs.getString("writer"));
 	               article.setEmail(rs.getString("email"));
@@ -181,31 +182,212 @@ public class BoardDAO {
 	               
 	               
 	            }while(rs.next());
-	         }
+	        }
 	         
-	      }catch(Exception ss) {
-				ss.printStackTrace();
-			} finally {
-				if(rs != null)
-					try{
-						rs.close();
-					}catch(SQLException ex){}
+	    }catch(Exception ss) {
+			ss.printStackTrace();
+		}finally {
+			if(rs != null)
+				try{
+					rs.close();
+				}catch(SQLException ex){}
 				
-				if(pstmt != null)
-					try{
-						pstmt.close();
-					}catch(SQLException ex){}
+			if(pstmt != null)
+				try{
+					pstmt.close();
+				}catch(SQLException ex){}
 				
-				if(conn != null)
-					try{
-						conn.close();
-					}catch(SQLException ex){}
+			if(conn != null)
+				try{
+					conn.close();
+				}catch(SQLException ex){}
 			}
 	      
-	      return articleList;
+	    return articleList;
 	      
-	   } // end getArticles
+	} // end getArticles
 
 	
+	/* list.jsp에서 글 제목을 클릭했을 경우 글 내용을 볼 수 있도록 하는 작업
+	 *  
+	 *  글의 num을 매개변수로 해서 하나의 글에 대한 상세한 정보를 데이터베이스에서 가져와야 한다
+	 */	
+	public BoardVO getArticle(int num) {
+		
+		Connection conn = null;
+	    PreparedStatement pstmt = null;
+	    ResultSet rs = null;
+	    
+	    BoardVO article = null;
+	    
+	    try {
+	    	
+	    	conn = ConnUtil.getConnection();
+	    	
+	        String sql = "update board set readcount = readcount+1 where num=?";
+	        pstmt = conn.prepareStatement(sql);
+	        pstmt.setInt(1, num);
+	        pstmt.executeUpdate(); // 실행만 
+	        
+	        sql="select * from board where num=?";
+	        pstmt = conn.prepareStatement(sql);
+	        pstmt.setInt(1, num);
+	        rs = pstmt.executeQuery(); // 실행결과 넣기
+	        
+	        if(rs.next()) {
+	        	article = new BoardVO();
+	        	
+	        	article.setNum(rs.getInt("num"));
+                article.setWriter(rs.getString("writer"));
+                article.setEmail(rs.getString("email"));
+                article.setSubject(rs.getString("subject"));
+                article.setPass(rs.getString("pass"));
+                article.setRegdate(rs.getTimestamp("regdate"));
+                article.setReadcount(rs.getInt("readcount"));
+                article.setRef(rs.getInt("ref"));
+                article.setStep(rs.getInt("step"));
+                article.setDepth(rs.getInt("depth"));
+                article.setContent(rs.getString("content"));
+                article.setIp(rs.getString("ip"));	        	
+	        }
+	        
+		} catch(Exception ss) {
+			ss.printStackTrace();
+		} finally {
+			if(rs != null)
+				try{
+					rs.close();
+				}catch(SQLException ex){}
+				
+			if(pstmt != null)
+				try{
+					pstmt.close();
+				}catch(SQLException ex){}
+				
+			if(conn != null)
+				try{
+					conn.close();
+				}catch(SQLException ex){}
+			}
+	    return article;
+	} // end getArticle
 	
+	
+	// 조회수는 증가하지 않으므로 제외, 번호의 해당하는 글을 가져온다 
+	public BoardVO updateGetArticle(int num) {
+		
+		Connection conn = null;
+	    PreparedStatement pstmt = null;
+	    ResultSet rs = null;
+	    
+	    BoardVO article = null;
+	    
+	    String sql = "";
+	    
+	    try {
+	    	
+	    	conn = ConnUtil.getConnection();
+	        
+	        sql="select * from board where num=?";
+	        pstmt = conn.prepareStatement(sql);
+	        pstmt.setInt(1, num);
+	        rs = pstmt.executeQuery();
+	        
+	        if(rs.next()) {
+	        	article = new BoardVO();
+	        	
+	        	article.setNum(rs.getInt("num"));
+                article.setWriter(rs.getString("writer"));
+                article.setEmail(rs.getString("email"));
+                article.setSubject(rs.getString("subject"));
+                article.setPass(rs.getString("pass"));
+                article.setRegdate(rs.getTimestamp("regdate"));
+                article.setReadcount(rs.getInt("readcount"));
+                article.setRef(rs.getInt("ref"));
+                article.setStep(rs.getInt("step"));
+                article.setDepth(rs.getInt("depth"));
+                article.setContent(rs.getString("content"));
+                article.setIp(rs.getString("ip"));	        	
+	        }
+	        
+		} catch(Exception ss) {
+			ss.printStackTrace();
+		} finally {
+			if(rs != null)
+				try{
+					rs.close();
+				}catch(SQLException ex){}
+				
+			if(pstmt != null)
+				try{
+					pstmt.close();
+				}catch(SQLException ex){}
+				
+			if(conn != null)
+				try{
+					conn.close();
+				}catch(SQLException ex){}
+			}
+	    
+	    return article;
+	} // end updateGetArticle
+	
+	
+	/* 글 수정 메소드 추가
+	 * 글 수정 페이지에서 글수정을 클릭하면 데이터베이스에서 실제 데이터가 수정이 된다. 
+	 */
+	public int updateArticle(BoardVO article) {
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String dbpasswd = "";
+		String sql = "";
+		int result = -1;
+		
+		try {
+			
+			conn = ConnUtil.getConnection();			
+			sql = "select pass from board where num=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, article.getNum());
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				dbpasswd = rs.getString("pass");
+				if(dbpasswd.equals(article.getPass())) {
+					sql = "update board set writer=?, email=?, subject=?, content=? where num=?";
+					pstmt = conn.prepareStatement(sql);
+					pstmt.setString(1, article.getWriter());
+					pstmt.setString(2, article.getEmail());
+					pstmt.setString(3, article.getSubject());
+					pstmt.setString(4, article.getContent());
+					pstmt.setInt(5, article.getNum());
+					pstmt.executeUpdate();
+					result = 1; // 글 수정 성공
+				}else {
+					result = 0; // 글 수정 실패
+				}
+			}
+			
+		} catch(Exception ss) {
+			ss.printStackTrace();
+		} finally {
+			if(rs != null)
+				try{
+					rs.close();
+				}catch(SQLException ex){}
+				
+			if(pstmt != null)
+				try{
+					pstmt.close();
+				}catch(SQLException ex){}
+				
+			if(conn != null)
+				try{
+					conn.close();
+				}catch(SQLException ex){}
+			}
+		return result;
+	}
 }
