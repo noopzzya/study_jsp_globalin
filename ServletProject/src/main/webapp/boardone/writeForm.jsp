@@ -63,7 +63,7 @@
 			<%if(request.getParameter("num") == null){ %>
 			<input type="text" size="12" maxlength="12" name="subject">
 			<%}else{ %>
-			<input type="text" size="12" maxlength="12" name="subject" value="[답변글]">
+			<input type="text" size="12" maxlength="12" name="subject" value="[답변]">
 			<%} %>
 		</td>
 	</tr>

@@ -6,23 +6,60 @@
 <%@ include file = "view/color.jsp" %>
 
 <%!
+// 한 페이지에 보여줄 목록 수를 지정
+int pageSize = 5;
+
 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 %>
 
 <%
+
+	String pageNum = request.getParameter("pageNum");
+
+	// 무엇을 검색할지
+	String searchWhat = request.getParameter("searchWhat");
+	
+	// 검색 할 내용
+	String searchText = request.getParameter("searchText");
+	
+	// 받아온 파라미터값에 한글로 변환처리
+	if(searchText != null){
+		searchText = new String(searchText.getBytes("utf-8"), "utf-8");
+	}
+	
+
+	if(pageNum == null){
+		pageNum = "1";
+	}
+
+	// 현재 페이지
+	int currentPage = Integer.parseInt(pageNum);	
+	int startRow = (currentPage-1) * pageSize+1;
+	int endRow = currentPage * pageSize;
+	
 	int count = 0;
 	int number = 0;
 	
 	List<BoardVO> articleList = null;
 	BoardDAO dbPro = BoardDAO.getInstance();
 	
-	count = dbPro.getArticleCount(); // 전체 글 수
+	// 검색이 아니면 전체리스트를 보여주고, 검색이면 검색한 내용을 보여줌
+	if(searchText == null){
+		count = dbPro.getArticleCount(); // 전체 글 수
+		
+		if(count > 0){
+			articleList = dbPro.getArticles(startRow, endRow);
+		}
+	}else { // 검색일 경우 검색한 내용을 출력
+		count = dbPro.getArticleCount(searchWhat, searchText); // 전체 글 수
+		
+		if(count > 0){
+			articleList = dbPro.getArticles(searchWhat, searchText, startRow, endRow);
+		}
+	} 
 	
-	if(count > 0){
-		articleList = dbPro.getArticles();
-	}
 	
-	number = count;
+	number = count - (currentPage-1) * pageSize;
 	
 %>
 
@@ -77,12 +114,29 @@ if(count == 0){
 		<td align="center"><%=number--%></td>
 		
 		<td width="250">
-			<a href="content.jsp?num=<%=article.getNum()%>&pageNum=1">
+		
+		<%
+		int wid = 0;
+		
+		if(article.getDepth() > 0){
+			wid = 5 * (article.getDepth());
+		%>
+		<img src="img/level.gif" width="<%=wid%>" height="16">
+		<img src="img/re.gif">
+		<% 
+		}else {
+		%>
+		<img src="img/level.gif" width="<%=wid%>" height="16">
+		<%
+		}
+		%>
+				
+			<a href="content.jsp?num=<%=article.getNum()%>&pageNum=<%=currentPage%>">
 				<%=article.getSubject() %>
 			</a>
-			
-			<%if(article.getReadcount() >= 20) {%>
-<!-- 				<img alt="사진" src="img/hot.gif" border="0" height="16"> -->
+ 			<!--if 조회수 넘을 경우 img 보임 -->
+			<%if(article.getReadcount() >= 5) {%>
+				<img alt="사진" src="img/hot.gif" border="0" height="16">
 			<%} %>
 		</td>
 		
@@ -111,6 +165,78 @@ if(count == 0){
 </table>
 
 <%}%>
+
+<!-- 페이징 처리 -->
+<%
+if(count > 0){
+	
+	int pageBlock = 2;
+	int imsi = count % pageSize == 0 ? 0 : 1;
+	int pageCount = count / pageSize + imsi;
+	
+	int startPage = (int)((currentPage-1) / pageBlock) * pageBlock+1;
+	int endPage = startPage + pageBlock - 1;
+	
+	if(endPage > pageCount) endPage = pageCount;
+	
+	if(startPage > pageBlock){
+	
+		// 검색일 경우와 아닐 경우의 페이징 처리
+		if(searchText == null){
+%>
+
+<a href="list.jsp?pageNum=<%=startPage-pageBlock %>">[이전]</a>
+
+<%	
+		}else {
+%>
+			<a href="list.jsp?pageNum=<%=startPage-pageBlock %>&searchWhat=<%=searchWhat%>&searchText=<%=searchText%>">[이전]</a>	
+<%		
+		}
+	}
+	
+	for(int i=startPage; i<=endPage; i++) {
+		
+		// 검색일 경우와 아닐 경우
+		if(searchText == null){
+		%>
+		<a href="list.jsp?pageNum=<%=i %>">[<%=i %>]</a>
+		<% 
+		}else {
+			%>
+		<a href="list.jsp?pageNum=<%=i %>&searchWhat=<%=searchWhat%>&searchText=<%=searchText%>"></a>	
+	<%		
+		}
+		
+	}
+
+	if(endPage < pageCount){
+		
+		// 검색일 경우와 아닐 경우
+		if(searchText == null){			
+		
+%>
+		<a href="list.jsp?pageNum=<%=startPage+pageBlock %>">[다음]</a>
+
+		<%}else {%>	
+			<a href="list.jsp?pageNum=<%=startPage+pageBlock %>&searchWhat=<%=searchWhat%>&searchText=<%=searchText%>">[다음]</a>
+<%
+		}
+	}
+}
+%>
+
+<!-- 검색창 폼 -->
+<form action="list.jsp">
+	<select name="searchWhat">
+		<option value="writer">작성자</option>
+		<option value="subject">제목</option>
+		<option value="content">내용</option>
+	</select>
+	<input type="text" name="searchText">
+	<input type="submit" value="검색">
+</form>
+
 </div>
 
 </body>
