@@ -154,7 +154,7 @@
 
       <Context docBase="C:\jsp_workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ServletProject" path="" reloadable="true" source="org.eclipse.jst.jee.server:ServletProject"/>
       
-      </Host>
+      <Context docBase="C:\jsp_workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\TeamProject_TravelReview" path="/TeamProject_TravelReview" reloadable="true" source="org.eclipse.jst.jee.server:TeamProject_TravelReview"/></Host>
     </Engine>
   </Service>
 </Server>

@@ -154,7 +154,7 @@
 
       <Context docBase="ServletProject" path="/" reloadable="true" source="org.eclipse.jst.jee.server:ServletProject"/>
       
-      </Host>
+      <Context docBase="TeamProject_TravelReview" path="/TeamProject_TravelReview" reloadable="true" source="org.eclipse.jst.jee.server:TeamProject_TravelReview"/></Host>
     </Engine>
   </Service>
 </Server>

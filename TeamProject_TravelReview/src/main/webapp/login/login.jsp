@@ -4,23 +4,74 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title></title>
+<title>로그인</title>
+
+<style>
+    body {
+        min-width: 1050px;
+        margin-top: 150px;
+        margin-bottom: 60px;
+        background-color: #fff;
+        
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 20px;
+        text-align: center;
+    }
+    
+    .loginform{
+    	width: 340px;
+        margin: 0 auto;
+        letter-spacing: -0.6px;
+        
+        
+    }
+    
+    form {
+    	margin-top: 30px;
+    	 
+    	height: 54px;
+        font-size: 14px;
+    }
+    
+    input {
+    	
+        
+        position: relative;
+        height: 48px;
+    
+    	width: 100%;
+        height: 46px;
+        padding: 0 11px 1px 15px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #333;
+        outline: none;
+        box-sizing: border-box;
+    }
+    
+    .id-input:placeholder{
+    	color: #ccc;
+    }
+    </style>
+
 </head>
 <body>
 
-<div>
-	<div>로그인</div>
-	<div>
-		<form action="">
-			<div>
-				<div>
-					<div>
-						<input type="text">
-					</div>
-				</div>
-			</div>
-		</form>
-	</div>
+<div>로그인</div>
+<div class="loginform">
+	<form action="">
+		<div>
+			<input type="text" name="id" value="" placeholder="아이디를 입력해주세요">
+		</div>
+		
+		<div>
+			<input type="text" name="id" value="" placeholder="비밀번호를 입력해주세요">
+		</div>
+	</form>
 </div>
 
 </body>
