@@ -35,8 +35,6 @@
     }
     
     input {
-    	
-        
         position: relative;
         height: 48px;
     
@@ -56,6 +54,13 @@
     .id-input:placeholder{
     	color: #ccc;
     }
+    
+    .spanBoard{
+    	width: 1px;
+        height: 10px;
+        margin: 3px 6px 0;
+        background-color: #333;
+    }
     </style>
 
 </head>
@@ -70,6 +75,22 @@
 		
 		<div>
 			<input type="text" name="id" value="" placeholder="비밀번호를 입력해주세요">
+		</div>
+		
+		<div>
+			<a>아이디 찾기</a>
+			<span class="spanBoard"></span>
+			<a>비밀번호 찾기</a>
+		</div>
+		
+		<div>
+			<button>
+				<span>로그인</span>
+			</button>
+			
+			<button>
+				<span>회원가입</span>
+			</button>
 		</div>
 	</form>
 </div>

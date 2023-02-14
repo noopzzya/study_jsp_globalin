@@ -31,8 +31,11 @@
     <fullyQualifiedTypeName name="com.boardone.BoardDAO"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="com.boardone.BoardVO"/>
+    <fullyQualifiedTypeName name="com.boardone.ConnUtil"/>
+    <fullyQualifiedTypeName name="com.logon.LogonDBBean"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
-    <fullyQualifiedTypeName name="com.boardone.ConnUtil"/>
+    <fullyQualifiedTypeName name="com.logon.ConnUtil"/>
 </qualifiedTypeNameHistroy>
