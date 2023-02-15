@@ -2,7 +2,6 @@ package com.memberone;
 
 import java.sql.*;
 import java.util.Vector;
-
 import javax.sql.*;
 import javax.naming.*;
 
@@ -90,8 +89,7 @@ public class StudentDAO {
 				tempZipcode.setDong(rs.getString("dong"));
 				tempZipcode.setRi(rs.getString("ri"));
 				tempZipcode.setBunji(rs.getString("bunji"));
-				vecList.addElement(tempZipcode);
-				
+				vecList.addElement(tempZipcode);			
 			}
 			
 		} catch(SQLException ss) {

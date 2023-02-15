@@ -3,7 +3,7 @@
 
 <%
 	String loginID = (String)session.getAttribute("loginID");
-%>  
+%>
     
 <!DOCTYPE html>
 <html>
@@ -28,7 +28,6 @@
 	
 </table>
 <%}else { %>
-
 
 <form action="loginProc.jsp" method="post">
 <table width="300" border="1">

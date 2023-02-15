@@ -10,7 +10,15 @@
 		}
 		
 	}
-%>   
+%>
+
+<%
+request.setCharacterEncoding("utf-8");
+int filecounter = 0;
+if (request.getParameter("addcnt") != null) {
+   filecounter = Integer.parseInt(request.getParameter("addcnt"));
+}
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -107,9 +115,19 @@ function elementCheck(formName) {
 <form name="frmName2" method="post" enctype="multipart/form-data">
 <table width="75%" border="1" align="center" cellpadding="1" cellspacing="1" bordercolor="#660000" bgcolor="#ffff99">
 <tr bgcolor="#ffcc00">
-	<td width="40%">	
-	</td>
+    <td width="40%">
+	    <input type="hidden" name="txtUser" value="<%=getParam(request, "user")%>"> 
+		<input type="hidden" name="txtTitle" value="<%=getParam(request, "title")%>"> 
+		<input type="hidden" name="txtAbstract" value="<%=getParam(request, "abstract")%>">
+		<%
+		for (int i = 0; i < filecounter; i++) {
+		%> 
+		
+		<input type="file" size="50" name="selectFile<%=i%>"><br>
 	
+		<%} %>
+	</td>
+
 	<td>
 		<input type="button" value="DONE" onclick="elementCheck(this.form)">
 	</td>
