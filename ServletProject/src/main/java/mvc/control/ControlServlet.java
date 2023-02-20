@@ -12,7 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import mvc.action.Action;
 
-@WebServlet("*.do")
+// controller의 역할을 수행하는 서블릿
+// mvcmem.control과 중복으로 web.xml 사용 시 어노테이션 주석처리 
+@WebServlet("*.mdo")
 public class ControlServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -22,7 +24,7 @@ public class ControlServlet extends HttpServlet {
 		
 		String cmd = request.getParameter("cmd");
 		
-		if(cmd != null) { // cmd가 null이 아닐 때
+		if(cmd != null) { // cmd(파라미터)가 null이 아닐 때
 			
 			ActionFactory factory = ActionFactory.getInstance();
 			Action action = factory.getAction(cmd);

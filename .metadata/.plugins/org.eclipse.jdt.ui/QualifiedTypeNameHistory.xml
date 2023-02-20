@@ -17,7 +17,6 @@
     <fullyQualifiedTypeName name="javax.servlet.ServletContextListener"/>
     <fullyQualifiedTypeName name="javax.servlet.ServletContextEvent"/>
     <fullyQualifiedTypeName name="javax.servlet.annotation.WebListener"/>
-    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
     <fullyQualifiedTypeName name="java.io.PrintWriter"/>
     <fullyQualifiedTypeName name="java.util.Vector"/>
     <fullyQualifiedTypeName name="com.jdbc.TempMember"/>
@@ -47,4 +46,14 @@
     <fullyQualifiedTypeName name="org.jfree.chart.JFreeChart"/>
     <fullyQualifiedTypeName name="org.jfree.chart.ChartFactory"/>
     <fullyQualifiedTypeName name="org.jfree.chart.plot.PlotOrientation"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+    <fullyQualifiedTypeName name="javax.swing.Action"/>
+    <fullyQualifiedTypeName name="mvc.action.Action"/>
+    <fullyQualifiedTypeName name="mvc.control.ActionFactory"/>
+    <fullyQualifiedTypeName name="mvc.control.ActionForward"/>
+    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="mvc.action.IndexAction"/>
+    <fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
 </qualifiedTypeNameHistroy>

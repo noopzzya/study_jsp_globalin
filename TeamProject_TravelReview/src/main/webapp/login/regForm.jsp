@@ -16,7 +16,7 @@ body {
 }
 
 .join {
-	margin-bottom: 50px;
+	margin-bottom: 10px;
     font-size: 28px;
     line-height: 35px;
     font-weight: 500;
@@ -25,9 +25,10 @@ body {
     color: #333;
 }
 
-div {
+div {	
 	width: 640px;
     margin: 0px auto;
+	
 }
 
 .border {
@@ -43,9 +44,106 @@ div {
 }
 
 .div1 {
+	
 	display: inline-flex;
     width: 100%;
     padding: 10px 20px;
+    
+}
+
+.left {
+	width: 139px;
+    padding-top: 12px;
+}
+
+.l_label {
+	
+    color: rgb(51, 51, 51);
+    line-height: 20px;
+}
+
+.red_span {
+	color: rgb(238, 106, 123);
+}
+
+.center { 
+	flex: 1 1 0%;	 
+	padding-bottom: 0px;
+	position: relative;
+    height: 48px;
+}
+
+.c_input {
+	width: 100%;
+    height: 46px;
+    padding: 0px 11px 1px 15px;
+    border-radius: 4px;
+    border: 1px solid rgb(221, 221, 221);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgb(51, 51, 51);
+    outline: none;
+    box-sizing: border-box;
+}
+
+.right {
+	width: 120px;
+    margin-left: 8px;
+}
+
+.b_right {
+	height: 44px;
+    border-radius: 3px;
+    display: block;
+    padding: 0px 10px;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 3px;
+    color: #2EA26B;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #2EA26B;
+}
+
+.w_right {
+	height: 44px;
+    border-radius: 3px;
+    display: block;
+    padding: 0px 10px;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 3px;
+    color: rgb(95, 0, 128);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #fff;
+}
+
+span {
+	font-weight: 500;
+    font-size: 14px;
+}
+
+.c_bottom {
+	display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-top: 1px solid rgb(247, 247, 247);
+    padding: 40px 0px;
+}
+
+.c_button {
+	display: block;
+    padding: 0px 10px;
+    text-align: center;
+    overflow: hidden;
+    width: 240px;
+    height: 56px;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    background-color: #2EA26B;
+    border: 0px none;  
 }
 
 </style>
@@ -58,113 +156,122 @@ div {
 	
 	<div class="border">
 	
-		<div class="article"><span>*</span>필수입력사항</div>
+		<div class="article"><span class="red_span">*</span>필수입력사항</div>
 		
 		<div>
 		
 			<div class="div1">
-				<div>
-					<label>아이디<span>*</span></label>
+				<div class="left">
+					<label class="l_label">아이디<span class="red_span">*</span></label>
 				</div>
-				<div>
-					<div>
-						<input placeholder="아이디를 입력해주세요" type="text">
-					</div>
+				<div class="center">
+					<input class="c_input" placeholder="아이디를 입력해주세요" type="text">
 				</div>
-				<div>
-					<button><span>중복확인</span></button>
+				<div class="right">
+					<button class="b_right"><span>중복확인</span></button>
 				</div>
 			</div>
 			
-			<div>
-				<div>
-					<label>비밀번호<span>*</span></label>
+			<div class="div1">
+				<div class="left">
+					<label class="l_label">비밀번호<span class="red_span">*</span></label>
 				</div>
-				<div>
-					<div>
-						<input placeholder="비밀번호를 입력해주세요" type="password">
-					</div>
+				<div class="center">
+					<input class="c_input" placeholder="비밀번호를 입력해주세요" type="password">
 				</div>
-			</div>
-			
-			<div>
-				<div>
-					<label>비밀번호확인<span>*</span></label>
-				</div>
-				<div>
-					<div>
-						<input placeholder="비밀번호를 한번 더 입력해주세요" type="password">
-					</div>
+				<div class="right">
+					<button class="w_right"></button>
 				</div>
 			</div>
 			
-			<div>
-				<div>
-					<label>이름<span>*</span></label>
+			<div class="div1">
+				<div class="left">
+					<label class="l_label">비밀번호확인<span class="red_span">*</span></label>
 				</div>
-				<div>
-					<div>
-						<input placeholder="이름을 입력해주세요" type="text">
-					</div>
+				<div class="center">
+					<input class="c_input" placeholder="비밀번호를 한번 더 입력해주세요" type="password">
 				</div>
-			</div>
-			
-			<div>
-				<div>
-					<label>이메일<span>*</span></label>
-				</div>
-				<div>
-					<div>
-						<input placeholder="이메일을 입력해주세요" type="text">
-					</div>
+				<div class="right">
+					<button class="w_right"></button>
 				</div>
 			</div>
 			
-			<div>
-				<div>
-					<label>휴대폰<span>*</span></label>
+			<div class="div1">
+				<div class="left">
+					<label class="l_label">이름<span class="red_span">*</span></label>
 				</div>
-				<div>
-					<div>
-						<input placeholder="숫자만 입력해주세요" type="text">
-					</div>
+				<div class="center">
+					<input class="c_input" placeholder="이름을 입력해주세요" type="text">
 				</div>
-			</div>
-			
-			<div>
-				<div>
-					<label>우편번호<span>*</span></label>
-				</div>
-				<div>
-					<div>
-						<input type="text">
-					</div>
-				</div>
-				<div>
-					<button><span>찾기</span></button>
+				<div class="right">
+					<button class="w_right"></button>
 				</div>
 			</div>
 			
-			<div>
-				<div>
-					<label>주소<span>*</span></label>
+			<div class="div1">
+				<div class="left">
+					<label class="l_label">이메일<span class="red_span">*</span></label>
 				</div>
-				<div>
-					<div>
-						<input type="text">
-					</div>
+				<div class="center">
+					<input class="c_input" placeholder="이메일을 입력해주세요" type="text">
+				</div>
+				<div class="right">
+					<button class="w_right"></button>
 				</div>
 			</div>
 			
-			<div>
-				<div>
-					<label>상세주소<span>*</span></label>
+			<div class="div1">
+				<div class="left">
+					<label class="l_label">휴대폰<span class="red_span">*</span></label>
 				</div>
-				<div>
-					<div>
-						<input placeholder="상세주소를 입력해주세요" type="text">
-					</div>
+				<div class="center">
+					<input class="c_input" placeholder="숫자만 입력해주세요" type="text">
 				</div>
+				<div class="right">
+					<button class="w_right"></button>
+				</div>
+			</div>
+			
+			<div class="div1">
+				<div class="left">
+					<label class="l_label">우편번호<span class="red_span">*</span></label>
+				</div>
+				<div class="center">
+					<input class="c_input" type="text">
+				</div>
+				<div class="right">
+					<button class="b_right"><span>찾기</span></button>
+				</div>
+			</div>
+			
+			<div class="div1">
+				<div class="left">
+					<label class="l_label">주소<span class="red_span">*</span></label>
+				</div>
+				<div class="center">
+					<input class="c_input" type="text">
+				</div>
+				<div class="right">
+					<button class="w_right"></button>
+				</div>
+			</div>
+			
+			<div class="div1">
+				<div class="left">
+					<label class="l_label">상세주소<span class="red_span">*</span></label>
+				</div>
+				<div class="center">
+					<input class="c_input" placeholder="상세주소를 입력해주세요" type="text">
+				</div>
+				<div class="right">
+					<button class="w_right"></button>
+				</div>
+			</div>
+			
+			<div class="c_bottom">
+				<button class="c_button">
+					<span>가입하기</span>
+				</button>
 			</div>
 			
 		</div>		

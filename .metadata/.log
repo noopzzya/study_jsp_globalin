@@ -10990,3 +10990,349 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2023-02-17 12:23:00.241
 !MESSAGE No repository found at http://download.eclipse.org/technology/m2e/releases/.
+!SESSION 2023-02-20 09:20:32.476 -----------------------------------------------
+eclipse.buildId=4.20.0.I20210611-1600
+java.version=16.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2023-02-20 09:21:02.921
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-02-20 09:21:02.921
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@244c0fbe,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@68aa1164,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui.navigator 2 0 2023-02-20 09:21:09.843
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.ui.navigator 2 0 2023-02-20 09:21:09.843
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-02-20 09:21:09.861
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\USER'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2023-02-20 09:28:54.727 -----------------------------------------------
+eclipse.buildId=4.20.0.I20210611-1600
+java.version=16.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2023-02-20 09:29:57.974
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-02-20 09:29:57.974
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@64dfa1a3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1f5a1ad4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui.navigator 2 0 2023-02-20 09:30:04.563
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.ui.navigator 2 0 2023-02-20 09:30:04.563
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-02-20 09:30:04.671
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\USER'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2023-02-20 09:54:17.031
+!MESSAGE No repository found at http://download.eclipse.org/technology/m2e/releases/.
+
+!ENTRY org.eclipse.jst.jee 4 0 2023-02-20 10:21:58.942
+!MESSAGE [Working copy] __2F_ServletProject_2F_src_2F_main_2F_webapp_2F_directive_2F_includeEx_2E_jsp.java [in <default> [in src/main/java [in ServletProject]]] does not exist
+!STACK 1
+Java Model Exception: Java Model Status [[Working copy] __2F_ServletProject_2F_src_2F_main_2F_webapp_2F_directive_2F_includeEx_2E_jsp.java [in <default> [in src/main/java [in ServletProject]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:584)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:254)
+	at org.eclipse.jdt.internal.core.SourceRefElement.generateInfos(SourceRefElement.java:113)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:327)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:313)
+	at org.eclipse.jdt.internal.core.SourceType.getAnnotations(SourceType.java:218)
+	at org.eclipse.jst.jee.model.internal.WebAnnotationReader.createJavaeeObject(WebAnnotationReader.java:156)
+	at org.eclipse.jst.jee.model.internal.WebAnnotationReader.analyzeCompilationUnit(WebAnnotationReader.java:147)
+	at org.eclipse.jst.jee.model.internal.WebAnnotationReader.processAddedCompilationUnit(WebAnnotationReader.java:261)
+	at org.eclipse.jst.jee.model.internal.common.AbstractAnnotationModelProvider.recursevilyProcessCompilationUnits(AbstractAnnotationModelProvider.java:543)
+	at org.eclipse.jst.jee.model.internal.common.AbstractAnnotationModelProvider.recursevilyProcessCompilationUnits(AbstractAnnotationModelProvider.java:562)
+	at org.eclipse.jst.jee.model.internal.common.AbstractAnnotationModelProvider.recursevilyProcessPackages(AbstractAnnotationModelProvider.java:519)
+	at org.eclipse.jst.jee.model.internal.common.AbstractAnnotationModelProvider.recursevilyProcessPackages(AbstractAnnotationModelProvider.java:527)
+	at org.eclipse.jst.jee.model.internal.common.AbstractAnnotationModelProvider.processChangedProjectChildren(AbstractAnnotationModelProvider.java:501)
+	at org.eclipse.jst.jee.model.internal.common.AbstractAnnotationModelProvider.processChangedProject(AbstractAnnotationModelProvider.java:492)
+	at org.eclipse.jst.jee.model.internal.common.AbstractAnnotationModelProvider.internalPostChange(AbstractAnnotationModelProvider.java:457)
+	at org.eclipse.jst.jee.model.internal.common.AbstractAnnotationModelProvider.elementChanged(AbstractAnnotationModelProvider.java:448)
+	at org.eclipse.jdt.internal.core.DeltaProcessor$3.run(DeltaProcessor.java:1755)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyListeners(DeltaProcessor.java:1743)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.firePostChangeDelta(DeltaProcessor.java:1576)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.fire(DeltaProcessor.java:1552)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:781)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5907)
+	at org.eclipse.jst.jsp.core.internal.validation.JSPBatchValidator.validate(JSPBatchValidator.java:496)
+	at org.eclipse.wst.validation.Validator$V2.validate(Validator.java:1178)
+	at org.eclipse.wst.validation.internal.ValManager.validate(ValManager.java:704)
+	at org.eclipse.wst.validation.internal.ValBuilderJob$Visitor.visit(ValBuilderJob.java:351)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.deltaBuild(ValBuilderJob.java:211)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.run(ValBuilderJob.java:179)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.runInWorkspace(ValBuilderJob.java:126)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2023-02-20 10:21:58.944
+!MESSAGE [Working copy] __2F_ServletProject_2F_src_2F_main_2F_webapp_2F_directive_2F_includeEx_2E_jsp.java [in <default> [in src/main/java [in ServletProject]]] does not exist
+
+!ENTRY org.eclipse.jst.jee 4 0 2023-02-20 12:05:27.854
+!MESSAGE [Working copy] __2F_ServletProject_2F_src_2F_main_2F_webapp_2F_boardone_2F_list_2E_jsp.java [in <default> [in src/main/java [in ServletProject]]] does not exist
+!STACK 1
+Java Model Exception: Java Model Status [[Working copy] __2F_ServletProject_2F_src_2F_main_2F_webapp_2F_boardone_2F_list_2E_jsp.java [in <default> [in src/main/java [in ServletProject]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:584)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:254)
+	at org.eclipse.jdt.internal.core.SourceRefElement.generateInfos(SourceRefElement.java:113)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:597)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:327)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:313)
+	at org.eclipse.jdt.internal.core.SourceType.getAnnotations(SourceType.java:218)
+	at org.eclipse.jst.jee.model.internal.WebAnnotationReader.createJavaeeObject(WebAnnotationReader.java:156)
+	at org.eclipse.jst.jee.model.internal.WebAnnotationReader.analyzeCompilationUnit(WebAnnotationReader.java:147)
+	at org.eclipse.jst.jee.model.internal.WebAnnotationReader.processAddedCompilationUnit(WebAnnotationReader.java:261)
+	at org.eclipse.jst.jee.model.internal.common.AbstractAnnotationModelProvider.recursevilyProcessCompilationUnits(AbstractAnnotationModelProvider.java:543)
+	at org.eclipse.jst.jee.model.internal.common.AbstractAnnotationModelProvider.recursevilyProcessCompilationUnits(AbstractAnnotationModelProvider.java:562)
+	at org.eclipse.jst.jee.model.internal.common.AbstractAnnotationModelProvider.recursevilyProcessPackages(AbstractAnnotationModelProvider.java:519)
+	at org.eclipse.jst.jee.model.internal.common.AbstractAnnotationModelProvider.recursevilyProcessPackages(AbstractAnnotationModelProvider.java:527)
+	at org.eclipse.jst.jee.model.internal.common.AbstractAnnotationModelProvider.processChangedProjectChildren(AbstractAnnotationModelProvider.java:501)
+	at org.eclipse.jst.jee.model.internal.common.AbstractAnnotationModelProvider.processChangedProject(AbstractAnnotationModelProvider.java:492)
+	at org.eclipse.jst.jee.model.internal.common.AbstractAnnotationModelProvider.internalPostChange(AbstractAnnotationModelProvider.java:457)
+	at org.eclipse.jst.jee.model.internal.common.AbstractAnnotationModelProvider.elementChanged(AbstractAnnotationModelProvider.java:448)
+	at org.eclipse.jdt.internal.core.DeltaProcessor$3.run(DeltaProcessor.java:1755)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyListeners(DeltaProcessor.java:1743)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.firePostChangeDelta(DeltaProcessor.java:1576)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.fire(DeltaProcessor.java:1552)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:781)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5907)
+	at org.eclipse.jst.jsp.core.internal.validation.JSPBatchValidator.validate(JSPBatchValidator.java:496)
+	at org.eclipse.wst.validation.Validator$V2.validate(Validator.java:1178)
+	at org.eclipse.wst.validation.internal.ValManager.validate(ValManager.java:704)
+	at org.eclipse.wst.validation.internal.ValBuilderJob$Visitor.visit(ValBuilderJob.java:351)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.deltaBuild(ValBuilderJob.java:211)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.run(ValBuilderJob.java:179)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.runInWorkspace(ValBuilderJob.java:126)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2023-02-20 12:05:27.856
+!MESSAGE [Working copy] __2F_ServletProject_2F_src_2F_main_2F_webapp_2F_boardone_2F_list_2E_jsp.java [in <default> [in src/main/java [in ServletProject]]] does not exist
+!SESSION 2023-02-20 13:51:12.006 -----------------------------------------------
+eclipse.buildId=4.20.0.I20210611-1600
+java.version=16.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-02-20 13:51:36.613
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2023-02-20 13:52:06.616
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-02-20 13:52:06.616
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4cd7128,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@22b4ad0c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.jst.jsp.core 4 4 2023-02-20 13:52:11.269
+!MESSAGE A workspace crash was detected. The previous session did not exit normally. Not using saved taglib indexes.
+
+!ENTRY org.eclipse.ui.navigator 2 0 2023-02-20 13:52:14.796
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.ui.navigator 2 0 2023-02-20 13:52:14.798
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-02-20 13:52:14.832
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\USER'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface.text 4 0 2023-02-20 14:21:10.151
+!MESSAGE java.lang.NullPointerException: Cannot invoke "java.util.concurrent.CompletionStage.toCompletableFuture()" because the return value of "java.util.function.Function.apply(Object)" is null
+!STACK 0
+java.util.concurrent.CompletionException: java.lang.NullPointerException: Cannot invoke "java.util.concurrent.CompletionStage.toCompletableFuture()" because the return value of "java.util.function.Function.apply(Object)" is null
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:314)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:319)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1155)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:295)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+Caused by: java.lang.NullPointerException: Cannot invoke "java.util.concurrent.CompletionStage.toCompletableFuture()" because the return value of "java.util.function.Function.apply(Object)" is null
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1146)
+	... 6 more
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2023-02-20 14:48:24.249
+!MESSAGE No repository found at http://download.eclipse.org/technology/m2e/releases/.
+!SESSION 2023-02-20 16:22:04.809 -----------------------------------------------
+eclipse.buildId=4.20.0.I20210611-1600
+java.version=16.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-02-20 16:22:14.086
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2023-02-20 16:22:40.384
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-02-20 16:22:40.384
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@511ad0dd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@634d56eb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui.navigator 2 0 2023-02-20 16:22:53.799
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.ui.navigator 2 0 2023-02-20 16:22:53.799
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-02-20 16:22:53.819
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\USER'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jst.jsp.core 4 4 2023-02-20 16:25:05.870
+!MESSAGE A workspace crash was detected. The previous session did not exit normally. Not using saved taglib indexes.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2023-02-20 16:52:17.506
+!MESSAGE No repository found at http://download.eclipse.org/technology/m2e/releases/.
+!SESSION 2023-02-20 18:39:57.471 -----------------------------------------------
+eclipse.buildId=4.20.0.I20210611-1600
+java.version=16.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2023-02-20 19:04:02.639
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-02-20 19:04:02.639
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@471d6571,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@213bd66a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui.navigator 2 0 2023-02-20 19:04:07.031
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.ui.navigator 2 0 2023-02-20 19:04:07.032
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-02-20 19:04:09.112
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\USER'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2023-02-20 19:45:42.740
+!MESSAGE No repository found at http://download.eclipse.org/technology/m2e/releases/.
