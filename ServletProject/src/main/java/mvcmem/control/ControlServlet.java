@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-//@WebServlet("/ControlServlet")
+// mvc.control과 중복으로 사용시 주의
+@WebServlet("*.mdo")
 public class ControlServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

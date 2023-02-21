@@ -14,7 +14,7 @@ import mvc.action.Action;
 
 // controller의 역할을 수행하는 서블릿
 // mvcmem.control과 중복으로 web.xml 사용 시 어노테이션 주석처리 
-@WebServlet("*.mdo")
+//@WebServlet("*.mdo")
 public class ControlServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

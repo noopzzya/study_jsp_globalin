@@ -14,7 +14,7 @@
 <body bgcolor="#ffffcc">
 <br>
 <div align="center">
-<b><${id}</b>
+<b>${id}</b>
 
 <c:if test="${check eq true}">
 	는 이미 존재하는 ID입니다.<br><br>

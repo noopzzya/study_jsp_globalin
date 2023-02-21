@@ -9,7 +9,7 @@
 <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
-<form action="regProc.jsp" method="post" name="regForm">
+<form action="member.mdo?cmd=regProc" method="post" name="regForm">
 
 <table border="1">
 

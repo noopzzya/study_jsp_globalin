@@ -266,6 +266,7 @@ public class StudentDAO {
 				vo.setName(rs.getString("name"));
 				vo.setPhone1(rs.getString("phone1"));
 				vo.setPhone2(rs.getString("phone2"));
+				vo.setPhone3(rs.getString("phone3"));
 				vo.setEmail(rs.getString("email"));
 				vo.setZipcode(rs.getString("zipcode"));
 				vo.setAddress1(rs.getString("address1"));

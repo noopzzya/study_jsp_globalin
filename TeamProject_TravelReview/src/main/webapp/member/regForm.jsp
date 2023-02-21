@@ -222,7 +222,7 @@ span {
 			
 			<div class="div1">
 				<div class="left">
-					<label class="l_label">휴대폰<span class="red_span">*</span></label>
+					<label class="l_label">휴대폰</label>
 				</div>
 				<div class="center">
 					<input class="c_input" placeholder="숫자만 입력해주세요" type="text">
@@ -258,7 +258,7 @@ span {
 			
 			<div class="div1">
 				<div class="left">
-					<label class="l_label">상세주소<span class="red_span">*</span></label>
+					<label class="l_label">상세주소</label>
 				</div>
 				<div class="center">
 					<input class="c_input" placeholder="상세주소를 입력해주세요" type="text">

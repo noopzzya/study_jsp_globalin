@@ -9,7 +9,7 @@
 <body>
 <h3 align="center">Index page 입니다.</h3>
 
-<a href="memver.mdo?cmd=login">로그인</a>
-<a href="memver.mdo?cmd=regForm">회원가입</a>
+<a href="member.mdo?cmd=login">로그인</a>
+<a href="member.mdo?cmd=regForm">회원가입</a>
 </body>
 </html>
