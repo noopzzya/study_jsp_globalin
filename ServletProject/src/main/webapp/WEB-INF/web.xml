@@ -174,5 +174,19 @@ xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/
 	<url-pattern>*.mdo</url-pattern>
 </servlet-mapping>
 -->
+
+<!-- boardtwo/Controller -->
+<servlet>
+	<servlet-name>Controller</servlet-name>
+	<servlet-class>boardtwo.controller.ControllerAction</servlet-class>
+	<init-param>
+		<param-name>propertyConfig</param-name>
+		<param-value>CommandPro.properties</param-value>
+	</init-param>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Controller</servlet-name>
+	<url-pattern>*.bdo</url-pattern>
+</servlet-mapping>
   
 </web-app>

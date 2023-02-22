@@ -24,7 +24,18 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
+		<item key="selection" value="updateA"/>
 		<list key="findhistory">
+			<item value="updateA"/>
+			<item value="updateG"/>
+			<item value="getArticle"/>
+			<item value="DAO"/>
+			<item value="request"/>
+			<item value="한 페이지"/>
+			<item value="검색"/>
+			<item value="getA"/>
+			<item value="get a"/>
+			<item value="end d"/>
 		</list>
 		<list key="replacehistory">
 		</list>

@@ -1,12 +1,15 @@
 package mvcmem.control;
 //mvcmem.action (패키지명 주의해서 import)
 
+import mvcmem.action.DeleteFormAction;
+import mvcmem.action.DeleteProcAction;
 import mvcmem.action.IdCheckAction;
 import mvcmem.action.IndexAction;
 import mvcmem.action.LoginFormAction;
 import mvcmem.action.LoginProcAction;
 import mvcmem.action.LogoutAction;
 import mvcmem.action.ModifyFormAction;
+import mvcmem.action.ModifyProcAction;
 import mvcmem.action.RegFormAction;
 import mvcmem.action.RegProcAction;
 import mvcmem.action.ZipCheckAction;
@@ -57,9 +60,10 @@ public class ActionFactory {
 		case "login":
 			action = new LoginFormAction();
 			break;	
-			
+		
+		// loginProc.jsp 생성없이 LoginProcAction에서 처리
 		case "loginProc":
-			action = new LoginProcAction();
+			action = new LoginProcAction(); 
 			break;	
 			
 		case "logout":
@@ -68,6 +72,18 @@ public class ActionFactory {
 		
 		case "modifyForm":
 			action = new ModifyFormAction();
+			break;	
+		
+		case "modifyProc":
+			action = new ModifyProcAction();
+			break;		
+		
+		case "deleteForm":
+			action = new DeleteFormAction();
+			break;
+						
+		case "deleteProc":
+			action = new DeleteProcAction();
 			break;	
 			
 		default:
