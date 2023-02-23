@@ -19,8 +19,7 @@ function dongCheck(){
 		document.zipForm.dong.focus();
 		return;
 	}
-	document.zipForm.submit();
-	
+	document.zipForm.submit();	
 }
 
 function sendAddress(zipcode,sido,gugun,dong,ri,bunji){

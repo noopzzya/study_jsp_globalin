@@ -29,3 +29,15 @@ function writeSave(){
 		return false;
 	}
 }
+
+function frm_sub(i){
+	i_frm.action = "/boardtwo/list.bdo?pageNum="+i;
+	i_frm.submit();
+}
+
+function check(){
+	if(document.find_frm.find_box.value == ""){
+		alert("검색어를 입력해주세요.");
+		return false;
+	}
+}

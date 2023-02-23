@@ -145,12 +145,12 @@ span {
     background-color: #2EA26B;
     border: 0px none;  
 }
-
 </style>
 
+<script type="text/javascript" src="script.js"></script>
 </head>
 <body>
-<form action="#" method="post" name="regFrom">
+<form action="member.do?cmd=regProc" method="post" name="regFrom">
 
 <div>
 	<div class="join">회원가입</div>
@@ -166,10 +166,10 @@ span {
 					<label class="l_label">아이디<span class="red_span">*</span></label>
 				</div>
 				<div class="center">
-					<input class="c_input" placeholder="아이디를 입력해주세요" type="text">
+					<input class="c_input" placeholder="아이디를 입력해주세요" type="text" name="id">
 				</div>
 				<div class="right">
-					<button class="b_right"><span>중복확인</span></button>
+					<button class="b_right" onclick="idCheck(this.from.id.value)"><span>중복확인</span></button>
 				</div>
 			</div>
 			
@@ -238,10 +238,10 @@ span {
 					<label class="l_label">우편번호<span class="red_span">*</span></label>
 				</div>
 				<div class="center">
-					<input class="c_input" type="text">
+					<input class="c_input" type="text" onclick="zipCheck()">
 				</div>
 				<div class="right">
-					<button class="b_right"><span>찾기</span></button>
+					<button class="b_right" onclick="zipCheck()"><span>찾기</span></button>
 				</div>
 			</div>
 			
@@ -270,7 +270,7 @@ span {
 			</div>
 			
 			<div class="c_bottom">
-				<button class="c_button">
+				<button class="c_button" onclick="inputCheck()">
 					<span>가입하기</span>
 				</button>
 			</div>

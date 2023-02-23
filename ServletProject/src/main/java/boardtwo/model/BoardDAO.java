@@ -456,118 +456,154 @@ public class BoardDAO {
 	
 	
 	// 검색한 내용이 몇개인지를 반환하는 함수(what:검색조건, content:검색내용)
-//	public int getArticleCount(String what, String content) {
-//		
-//		Connection conn = null;
-//		PreparedStatement pstmt = null;
-//		ResultSet rs = null;
-//		
-//		int x = 0;
-//		
-//		try {
-//			
-//			conn = ConnUtil.getConnection();
-//			String sql = "select count(*) from board where "+what+ " like '%"+content+"%'";
-//			pstmt = conn.prepareStatement(sql);
-//			rs = pstmt.executeQuery();
-//			
-//			if(rs.next()) {
-//				x = rs.getInt(1);
-//			}
-//			
-//		} catch(Exception ss) {
-//			ss.printStackTrace();
-//		} finally {
-//			if(rs != null)
-//				try{
-//					rs.close();
-//				}catch(SQLException ex){}
-//			
-//			if(pstmt != null)
-//				try{
-//					pstmt.close();
-//				}catch(SQLException ex){}
-//			
-//			if(conn != null)
-//				try{
-//					conn.close();
-//				}catch(SQLException ex){}
-//		}
-//		
-//		return x;
-//	}
-//	
-//	
-//	// 검색한 내용이 리스트로 받아사서 반환하는 함수(what:검색조건, content:검색내용, start, end)
-//	public List<BoardVO> getArticles(String what, String content, int start, int end){
-//	      
-//	    Connection conn = null;
-//	    PreparedStatement pstmt = null;
-//	    ResultSet rs = null;
-//	    List<BoardVO> articleList = null;
-//	      
-//	    try {
-//	        conn = ConnUtil.getConnection(); 
-//	        // up2
-//	        //String sql = "select * from board order by num desc"; // up3
-//	        String sql = "select * from (select rownum rnum, num, writer, email, subject, pass, regdate, readcount, ref, step, depth, content, "
-//	        		+ "ip from (select * from board where "+what+" like '%"+content+"%' order by ref desc, step asc)) where rnum >=? and rnum <=?";
-//	        
-//	        pstmt = conn.prepareStatement(sql);
-//	        
-//	        pstmt.setInt(1, start);
-//	        pstmt.setInt(2, end);
-//	        
-//	        rs = pstmt.executeQuery();
-//	         
-//	        if(rs.next()) {
-//	            
-//	            articleList = new ArrayList<BoardVO>(end-start+1); // up4
-//	            
-//	            do {
-//	               BoardVO article = new BoardVO();
-//	               
-//	               article.setNum(rs.getInt("num"));
-//	               article.setWriter(rs.getString("writer"));
-//	               article.setEmail(rs.getString("email"));
-//	               article.setSubject(rs.getString("subject"));
-//	               article.setPass(rs.getString("pass"));
-//	               article.setRegdate(rs.getTimestamp("regdate"));
-//	               article.setReadcount(rs.getInt("readcount"));
-//	               article.setRef(rs.getInt("ref"));
-//	               article.setStep(rs.getInt("step"));
-//	               article.setDepth(rs.getInt("depth"));
-//	               article.setContent(rs.getString("content"));
-//	               article.setIp(rs.getString("ip"));
-//	               
-//	               articleList.add(article);
-//	               
-//	               
-//	            }while(rs.next());
-//	        }
-//	         
-//	    }catch(Exception ss) {
-//			ss.printStackTrace();
-//		}finally {
-//			if(rs != null)
-//				try{
-//					rs.close();
-//				}catch(SQLException ex){}
-//				
-//			if(pstmt != null)
-//				try{
-//					pstmt.close();
-//				}catch(SQLException ex){}
-//				
-//			if(conn != null)
-//				try{
-//					conn.close();
-//				}catch(SQLException ex){}
-//			}
-//	      
-//	    return articleList;
-//	      
-//	} // end getArticles
+	public int getArticleCount(String find, String find_box) {
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		int x = 0;
+		
+		try {
+			
+			conn = ConnUtil.getConnection();
+			
+			if(find.equals("writer")) {
+				pstmt = conn.prepareStatement("select count(*) from board where writer=?");
+				pstmt.setString(1, find_box);
+			} else if(find.equals("subject")) {
+				pstmt = conn.prepareStatement("select count(*) from board where subject like '%"+find_box+"%' ");
+			} else if(find.equals("content")) {
+				pstmt = conn.prepareStatement("select count(*) from board where content like '%"+find_box+"%' ");
+			} else {
+				pstmt = conn.prepareStatement("select count(*) from board");
+			}
+						
+			//String sql = "select count(*) from board where "+what+ " like '%"+content+"%'";
+			//pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				x = rs.getInt(1);
+			}
+			
+		} catch(Exception ss) {
+			ss.printStackTrace();
+		} finally {
+			if(rs != null)
+				try{
+					rs.close();
+				}catch(SQLException ex){}
+			
+			if(pstmt != null)
+				try{
+					pstmt.close();
+				}catch(SQLException ex){}
+			
+			if(conn != null)
+				try{
+					conn.close();
+				}catch(SQLException ex){}
+		}
+		
+		return x;
+	}
+	
+	
+	// 검색한 내용이 리스트로 받아사서 반환하는 함수(what:검색조건, content:검색내용, start, end)
+	public List<BoardVO> getArticles(String find, String find_box, int start, int end){
+	      
+	    Connection conn = null;
+	    PreparedStatement pstmt = null;
+	    ResultSet rs = null;
+	    List<BoardVO> articleList = null;
+	      
+	    try {
+	        conn = ConnUtil.getConnection(); 
+	        // up2
+	        //String sql = "select * from board order by num desc"; // up3
+	        
+	        StringBuffer sql = new StringBuffer();
+	        sql.append("select * from");
+	        sql.append("(select rownum rnum, num, writer, email, subject, pass, regdate, readcount, ref, step, depth, content, ip from ");
+	        if(find.equals("writer")) {
+	        	sql.append("(select * from board where writer=? order by ref desc, step asc)) where rnum >=? and rnum <=?");
+	        	//sql.append("(select * from board where writer like '% "+find_box+" %' order by ref desc, step asc)) where rnum >=? and rnum <=?");
+	        	pstmt = conn.prepareStatement(sql.toString());
+//	        	pstmt.setInt(1, start);
+//	        	pstmt.setInt(2, end);	        	
+	        	
+	        	pstmt.setString(1, find_box);
+	        	pstmt.setInt(2, start);
+	        	pstmt.setInt(3, end);
+	        	
+	        }else if(find.equals("subject")) {
+	        	sql.append("(select * from board where subject like '%"+find_box+"%' order by ref desc, step asc)) where rnum >=? and rnum <=?");
+	        	pstmt = conn.prepareStatement(sql.toString());
+	        	pstmt.setInt(1, start);
+	        	pstmt.setInt(2, end);
+	        }else if(find.equals("content")) {
+	        	sql.append("(select * from board where content like '%"+find_box+"%' order by ref desc, step asc)) where rnum >=? and rnum <=?");
+	        	pstmt = conn.prepareStatement(sql.toString());
+	        	pstmt.setInt(1, start);
+	        	pstmt.setInt(2, end);
+	        }else {
+	        	sql.append("(select * from board order by ref desc, step asc)) where rnum >=? and rnum <=?");
+	        	pstmt = conn.prepareStatement(sql.toString());
+	        	pstmt.setInt(1, start);
+	        	pstmt.setInt(2, end);
+	        }
+	        
+	        rs = pstmt.executeQuery();
+	         
+	        if(rs.next()) {
+	            
+	            articleList = new ArrayList<BoardVO>(end-start+1); // up4
+	            
+	            do {
+	               BoardVO article = new BoardVO();
+	               
+	               article.setNum(rs.getInt("num"));
+	               article.setWriter(rs.getString("writer"));
+	               article.setEmail(rs.getString("email"));
+	               article.setSubject(rs.getString("subject"));
+	               article.setPass(rs.getString("pass"));
+	               article.setRegdate(rs.getTimestamp("regdate"));
+	               article.setReadcount(rs.getInt("readcount"));
+	               article.setRef(rs.getInt("ref"));
+	               article.setStep(rs.getInt("step"));
+	               article.setDepth(rs.getInt("depth"));
+	               article.setContent(rs.getString("content"));
+	               article.setIp(rs.getString("ip"));
+	               
+	               articleList.add(article);
+	               
+	               
+	            }while(rs.next());
+	        }
+	         
+	    }catch(Exception ss) {
+			ss.printStackTrace();
+		}finally {
+			if(rs != null)
+				try{
+					rs.close();
+				}catch(SQLException ex){}
+				
+			if(pstmt != null)
+				try{
+					pstmt.close();
+				}catch(SQLException ex){}
+				
+			if(conn != null)
+				try{
+					conn.close();
+				}catch(SQLException ex){}
+			}
+	      
+	    return articleList;
+	      
+	} // end getArticles
 
 	
 	

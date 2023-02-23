@@ -3,9 +3,6 @@ package mvcmem.model;
 import java.sql.*;
 import java.util.Vector;
 import javax.sql.*;
-
-import com.boardone.BoardDAO;
-
 import javax.naming.*;
 
 public class StudentDAO {

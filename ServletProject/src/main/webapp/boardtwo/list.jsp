@@ -11,15 +11,20 @@
 <meta charset="UTF-8">
 <title>게시판</title>
 <link href="style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="script.js"></script>
 </head>
 <body bgcolor="${bodyback_c}">
 
 <div align="center">
 <b>글목록(전체글:${count})</b>
 
-<table width="700">
+<table width="700" border="1" bgcolor="${value_c}">
 	<tr>
-		<td align="right" bgcolor="${value_c}">
+		<td align="left">
+			<a href="/boardtwo/list.bdo">전체목록</a>
+		</td>
+		
+		<td align="right">
 			<a href="/boardtwo/writeForm.bdo">글쓰기</a>
 		</td>
 	</tr>	
@@ -97,8 +102,8 @@
 </c:if>
 
 <%-- -- 페이징 처리 -- --%>
-
 <c:if test="${count > 0}">
+
 	<c:set var="imsi" value="${count % pageSize == 0 ? 0 : 1}"/>
 	<c:set var="pageCount" value="${count / pageSize + imsi}"/>
 	<c:set var="pageBlock" value="${2}"/>
@@ -112,31 +117,37 @@
 	</c:if>
 	
 	<c:if test="${startPage > pageBlock}">
-		<a href="/boardtwo/list.bdo?pageNum=${startPage - pageBlock}">[이전]</a>
+		<%-- <a href="/boardtwo/list.bdo?pageNum=${startPage - pageBlock}">[이전]</a> --%>
+		<a href="#" onclick="frm_sub(${startPage - pageBlock})">[이전]</a>		
 	</c:if>
 	
 	<c:forEach var="i" begin="${startPage}" end="${endPage}">
-		<a href="/boardtwo/list.bdo?pageNum=${i}">[${i}]</a>
+		<%-- <a href="/boardtwo/list.bdo?pageNum=${i}">[${i}]</a> --%>
+		<a href="#" onclick="frm_sub(${i})">[${i}]</a>
 	</c:forEach>
 	
 	<c:if test="${endPage < pageCount}">
-		<a href="/boardtwo/list.bdo?pageNum=${startPage + pageBlock}">[다음]</a>
+		<%-- <a href="/boardtwo/list.bdo?pageNum=${startPage + pageBlock}">[다음]</a> --%>
+		<a href="#" onclick="frm_sub(${startPage + pageBlock})">[다음]</a>
 	</c:if>
 	
 </c:if>
 
-<!-- 검색창 폼 -->
-<%-- 
-<form action="list.jsp">
-	<select name="searchWhat">
+<form name="i_frm" method="post">
+	<input type="hidden" name="find_box" value="${find_box}">
+	<input type="hidden" name="find" value="${find}">
+</form>
+
+<%-- 검색창 폼 --%>
+<form name="find_frm" action="/boardtwo/list.bdo" onsubmit="return check()">
+	<select name="find" size="1">
 		<option value="writer">작성자</option>
 		<option value="subject">제목</option>
 		<option value="content">내용</option>
 	</select>
-	<input type="text" name="searchText">
+	<input type="text" name="find_box">
 	<input type="submit" value="검색">
 </form>
---%>
 
 </div>
 

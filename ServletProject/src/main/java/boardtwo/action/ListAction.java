@@ -32,7 +32,6 @@ public class ListAction implements CommandAction {
 		searchText = new String(searchText.getBytes("utf-8"), "utf-8");
 	}
 	
-
 	if(pageNum == null){
 		pageNum = "1";
 	}
@@ -45,32 +44,29 @@ public class ListAction implements CommandAction {
 	int count = 0;
 	int number = 0;
 	
+	String find = null;
+	String find_box = null;
+	
+	find = request.getParameter("find");
+	find_box = request.getParameter("find_box");
+	
+	if(find == null) {
+		find = "no";
+	}
+	if(find_box == null) {
+		find_box = "no";
+	}
+		
 	List<BoardVO> articleList = null;
 	BoardDAO dbPro = BoardDAO.getInstance();
-	count = dbPro.getArticleCount();
+	
+	count = dbPro.getArticleCount(find, find_box);
 	
 	if(count > 0){ // 현재 페이지에 해당하는 글 목록
-		articleList = dbPro.getArticles(startRow, endRow);
+		articleList = dbPro.getArticles(find, find_box, startRow, endRow);
 	} else {
 		articleList = Collections.emptyList();
 	}
-	
-	/*
-	// 검색이 아니면 전체리스트를 보여주고, 검색이면 검색한 내용을 보여줌
-	if(searchText == null){
-		count = dbPro.getArticleCount(); // 전체 글 수
-		
-		if(count > 0){
-			articleList = dbPro.getArticles(startRow, endRow);
-		}
-	}else { // 검색일 경우 검색한 내용을 출력	
-		count = dbPro.getArticleCount(searchWhat, searchText); // 전체 글 수
-		
-		if(count > 0){
-			articleList = dbPro.getArticles(searchWhat, searchText, startRow, endRow);
-		}
-	} 
-	*/
 	
 	number = count - (currentPage-1) * pageSize;
 	
@@ -82,7 +78,9 @@ public class ListAction implements CommandAction {
 	request.setAttribute("pageSize", new Integer(pageSize));
 	request.setAttribute("number", new Integer(number));
 	request.setAttribute("articleList", articleList); // articleList 객체
-	
+	request.setAttribute("find", new String(find));
+	request.setAttribute("find_box",  new String(find_box));
+		
 	return "/boardtwo/list.jsp";
 	
 	}
