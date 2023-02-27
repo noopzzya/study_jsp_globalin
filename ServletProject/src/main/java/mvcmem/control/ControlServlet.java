@@ -50,8 +50,7 @@ public class ControlServlet extends HttpServlet {
 			out.println("<h4>http://localhost:9090/mvcmem/member.mdo?cmd=요청키워드</h4>");
 			
 			out.println("</body>");
-			out.println("</html>");
-			
+			out.println("</html>");			
 		}
 	}
 

@@ -184,7 +184,7 @@ public class StudentDAO {
 	
 	
 	/*
-	 * 데이터베이스에서 아이디와 비밀번호를 비교화여 그 결과를 정수형으로 리턴해주는 메소드
+	 * 데이터베이스에서 아이디와 비밀번호를 비교하여 그 결과를 정수형으로 리턴해주는 메소드
 	 * 1:로그인 성공, 0:비밀번호 오류, -1:아이디없음 
 	 */
 	public int loginCheck(String id, String pass) {
@@ -394,5 +394,6 @@ public class StudentDAO {
 		
 		return result;
 	} // end delectMember
+	
 	
 }

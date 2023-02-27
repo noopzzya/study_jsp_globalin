@@ -24,7 +24,7 @@ public class ControlServlet extends HttpServlet {
 		if(cmd != null) {
 			
 			ActionFactory factory = ActionFactory.getInstance();
-			Action action = factory.getAction("cmd");
+			Action action = factory.getAction(cmd);
 			
 			ActionForward af = action.execute(request, response);
 			
