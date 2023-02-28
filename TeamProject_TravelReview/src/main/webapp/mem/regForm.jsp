@@ -148,6 +148,7 @@ span {
 </style>
 
 <script type="text/javascript" src="script.js"></script>
+
 </head>
 <body>
 <form action="member.do?cmd=regProc" method="post" name="regFrom">

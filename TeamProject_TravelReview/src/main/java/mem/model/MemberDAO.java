@@ -7,10 +7,10 @@ import javax.naming.*;
 import javax.sql.*;
 
 public class MemberDAO {
-
+	
 	// 싱글톤 생성
 	private static MemberDAO instance = null;
-	
+
 	public MemberDAO() {}
 	
 	// 싱글톤 객체 생성
@@ -27,7 +27,7 @@ public class MemberDAO {
 	private Connection getConnection() {
 		
 		Connection conn = null;
-		
+
 		try {
 			Context initContext = new InitialContext();
 			Context envContext = (Context)initContext.lookup("java:/comp/env");

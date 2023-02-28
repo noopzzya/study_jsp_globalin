@@ -22,8 +22,7 @@ public class StudentDAO {
 		
 		return instance;
 	}
-	
-	
+		
 	private Connection getConnection() {
 		
 		Connection conn = null;
