@@ -142,6 +142,9 @@ public class MemberDAO {
 			conn = getConnection();
 			
 			String sql = "insert into member values(?,?,?,?,?,?,?,?,?)";
+			
+			System.out.println(vo.getId());
+			
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, vo.getId());
 			pstmt.setString(2, vo.getPass());

@@ -100,7 +100,6 @@ div {
     text-align: center;
     overflow: hidden;
     width: 100%;
-    border-radius: 3px;
     color: #2EA26B;
     background-color: rgb(255, 255, 255);
     border: 1px solid #2EA26B;
@@ -148,10 +147,9 @@ span {
 </style>
 
 <script type="text/javascript" src="script.js"></script>
-
 </head>
 <body>
-<form action="member.do?cmd=regProc" method="post" name="regFrom">
+<form action="member.do?cmd=regProc" method="post" name="regForm">
 
 <div>
 	<div class="join">회원가입</div>
@@ -170,7 +168,7 @@ span {
 					<input class="c_input" placeholder="아이디를 입력해주세요" type="text" name="id">
 				</div>
 				<div class="right">
-					<button class="b_right" onclick="idCheck(this.from.id.value)"><span>중복확인</span></button>
+					<button class="b_right" onclick="idCheck(this.form.id.value)"><span>중복확인</span></button>
 				</div>
 			</div>
 			
@@ -285,3 +283,4 @@ span {
 </form>
 </body>
 </html>
+

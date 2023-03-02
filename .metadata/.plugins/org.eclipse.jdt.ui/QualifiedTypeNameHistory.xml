@@ -23,7 +23,6 @@
     <fullyQualifiedTypeName name="mvcmem.model.StudentVO"/>
     <fullyQualifiedTypeName name="mvcmem.action.DeleteFormAction"/>
     <fullyQualifiedTypeName name="mvcmem.action.DeleteProcAction"/>
-    <fullyQualifiedTypeName name="mem.control.ActionForward"/>
     <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="java.util.Properties"/>
     <fullyQualifiedTypeName name="java.io.FileInputStream"/>
@@ -58,6 +57,7 @@
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
-    <fullyQualifiedTypeName name="mem.model.MemberDAO"/>
     <fullyQualifiedTypeName name="mem.model.MemberVO"/>
+    <fullyQualifiedTypeName name="mem.model.MemberDAO"/>
+    <fullyQualifiedTypeName name="mem.control.ActionForward"/>
 </qualifiedTypeNameHistroy>

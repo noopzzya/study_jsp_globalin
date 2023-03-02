@@ -19,13 +19,21 @@ public class RegProcAction implements Action {
 		MemberDAO dao = MemberDAO.getInstance();
 		
 		MemberVO vo = new MemberVO(
-			
+			request.getParameter("id"),
+			request.getParameter("pass"),
+			request.getParameter("name"),
+			request.getParameter("email"),
+			request.getParameter("phone"),
+			request.getParameter("zipcode"),
+			request.getParameter("address1"), 
+			request.getParameter("address2"),
+			request.getParameter("userlike")
 		);
 		
 		boolean flag = dao.memberInsert(vo);
 		request.setAttribute("flag", flag);
 		
-		return null;
+		return new ActionForward("/mem/regProc.jsp", false);
 	}
 
 }

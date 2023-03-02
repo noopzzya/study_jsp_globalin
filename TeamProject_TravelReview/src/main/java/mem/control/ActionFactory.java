@@ -28,11 +28,21 @@ public class ActionFactory {
 		case "regForm":
 			action = new RegFormAction();
 			break;
+		
+		case "idCheck":
+			action = new IdCheckAction();
+			break;	
 			
 		case "regProc":
 			action = new RegProcAction();
-			break;	
+			break;
+		
+		
+		
+		
 		}
+		
+		
 		
 		
 		
