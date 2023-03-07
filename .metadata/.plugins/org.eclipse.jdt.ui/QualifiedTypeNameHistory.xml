@@ -18,7 +18,6 @@
     <fullyQualifiedTypeName name="mvcmem.action.LogoutAction"/>
     <fullyQualifiedTypeName name="mvcmem.action.ModifyFormAction"/>
     <fullyQualifiedTypeName name="mvcmem.action.ModifyProcAction"/>
-    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
     <fullyQualifiedTypeName name="mvcmem.model.StudentDAO"/>
     <fullyQualifiedTypeName name="mvcmem.model.StudentVO"/>
     <fullyQualifiedTypeName name="mvcmem.action.DeleteFormAction"/>
@@ -59,5 +58,6 @@
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="mem.model.MemberVO"/>
     <fullyQualifiedTypeName name="mem.model.MemberDAO"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
     <fullyQualifiedTypeName name="mem.control.ActionForward"/>
 </qualifiedTypeNameHistroy>

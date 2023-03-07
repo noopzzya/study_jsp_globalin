@@ -55,7 +55,7 @@ public class ActionFactory {
 			
 		case "zipCheck":
 			action = new ZipCheckAction();
-			break;	
+			break;
 		
 		case "login":
 			action = new LoginFormAction();

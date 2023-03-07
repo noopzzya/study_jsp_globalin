@@ -8,9 +8,6 @@
 <head>
 <meta charset="UTF-8">
 <title>ID Check</title>
-<script type="text/javascript" src="script.js"></script>
-</head>
-<body>
 <style>
 .bt1 {
 	height: 30px;
@@ -18,13 +15,14 @@
     text-align: center;
     overflow: hidden;
     width: 50px;
-    color: #2EA26B;
-    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    background-color: #2EA26B;
     border: 1px solid #2EA26B;
 }
 </style>
-
-
+<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
 <div align="center">
 	<br>
 	

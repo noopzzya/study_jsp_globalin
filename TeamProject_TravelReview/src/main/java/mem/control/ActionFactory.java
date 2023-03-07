@@ -2,7 +2,6 @@ package mem.control;
 
 import mem.action.*;
 
-
 public class ActionFactory {
 
 	// 싱글톤
@@ -37,9 +36,19 @@ public class ActionFactory {
 			action = new RegProcAction();
 			break;
 		
+		case "zipCheck":
+			action = new ZipCheckAction();
+			break;
 		
+		case "login":
+			action = new LoginFormAction();
+			break;	
 		
-		
+		// loginProc.jsp 생성없이 LoginProcAction에서 처리
+		case "loginProc":
+			action = new LoginProcAction(); 
+			break;
+			
 		}
 		
 		
