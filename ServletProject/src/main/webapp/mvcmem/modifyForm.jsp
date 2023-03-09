@@ -7,15 +7,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Update Form</title>
+<title>ModifyForm</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="script.js"></script>
 </head>
 
 <body>
 <form action="member.mdo?cmd=modifyProc" method="post" name="regForm">
-
-
 
 <table border="1">
 

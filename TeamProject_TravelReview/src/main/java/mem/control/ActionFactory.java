@@ -49,6 +49,10 @@ public class ActionFactory {
 			action = new LoginProcAction(); 
 			break;
 			
+		case "logout":
+			action = new LogoutAction();
+			break;
+			
 		}
 		
 		

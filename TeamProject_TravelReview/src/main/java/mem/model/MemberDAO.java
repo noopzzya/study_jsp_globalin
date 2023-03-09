@@ -2,7 +2,6 @@ package mem.model;
 
 import java.sql.*;
 import java.util.Vector;
-
 import javax.naming.*;
 import javax.sql.*;
 
@@ -91,7 +90,7 @@ public class MemberDAO {
 			
 			conn = getConnection();
 			
-			String sql = "select * from zipcode where don like '"+dong+"%'";
+			String sql = "select * from zipcode where dong like '" +dong+ "%'" ;
 			pstmt = conn.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 			
