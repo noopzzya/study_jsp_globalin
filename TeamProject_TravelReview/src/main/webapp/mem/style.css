@@ -136,5 +136,6 @@ span {
     border-radius: 3px;
     color: rgb(255, 255, 255);
     background-color: #2EA26B;
-    border: 0px none;  
+    border: 0px none;
+    font-size: 15px;
 }
