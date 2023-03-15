@@ -24,8 +24,11 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="script"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="reset"/>
+			<item value="idCheck"/>
+			<item value="submit"/>
 			<item value="script"/>
 			<item value="글삭제"/>
 			<item value="updateA"/>

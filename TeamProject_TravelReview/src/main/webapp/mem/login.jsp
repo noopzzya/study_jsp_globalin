@@ -1,12 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:set var="loginID" value='<%=(String)session.getAttribute("loginID")%>'/>
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>로그인</title>
+<title>Login</title>
 
 <style>
     body {
@@ -31,8 +33,7 @@
     }
     
     form {			  	 
-    	font-size: 14px;
-    	height: 250px;           
+        
     }
     
     input {   
@@ -65,7 +66,7 @@
         margin: 0 6px 2px 4px;
     }
     
-    button{
+    .button{
     	font-weight: 800;
     	font-size: 16px;
     	margin-bottom: 10px;
@@ -101,15 +102,41 @@
 </head>
 <body>
 
+<c:choose>
+<c:when test="${loginID ne null}">
+	<c:out value="${loginID}"/>님 환영합니다.<br><br>
+<%-- 	<jsp:forward page="/index"/>  추후 수정--%>
+
+	<div class="button">
+		<a href="mem.do?cmd=modifyForm"><input type="button" value="정보수정" class="bt1"></a>
+		<a href="mem.do?cmd=deleteForm"><input type="button" value="회원탈퇴" class="bt1"></a>
+		<a href="mem.do?cmd=logout"><input type="button" value="로그아웃" class="bt1"></a>
+	</div>
+</c:when>
+
+<c:otherwise>
+<c:if test="${sessionScope.loginID eq 0}">
+	<script type="text/javascript">
+		alert('비밀번호가 틀렸습니다.');
+	</script>
+</c:if>
+
+<c:if test="${sessionScope.loginID eq -1}">
+	<script type="text/javascript">
+		alert('아이디가 존재하지 않습니다.')
+	</script>
+</c:if>
+
+<form action="mem.do?cmd=loginProc" method="post">
 <div class="loginDiv">로그인</div>
 <div class="loginDivForm">
-	<form action="">
+	
 		<div>
 			<input type="text" name="id" value="" placeholder="아이디를 입력해주세요">
 		</div>
 		
 		<div>
-			<input type="text" name="id" value="" placeholder="비밀번호를 입력해주세요">
+			<input type="text" name="pass" value="" placeholder="비밀번호를 입력해주세요">
 		</div>
 		
 		<div class="idpw">
@@ -119,17 +146,18 @@
 		</div>
 		
 		<div>
-			<button class="bt1">
-				<span>로그인</span>
-			</button>
-			
-			<button class="bt2">
-				<span>회원가입</span>
-			</button>
+			<input class="bt1" type="submit" value="로그인">
 		</div>
-	</form>
-	
+		
+		<div>
+			<input class="bt2" type="button" value="회원가입" onclick="javascript:window.location='?cmd=regForm'">
+		</div>
+		
 </div>
+
+</form>
+</c:otherwise>
+</c:choose>
 
 </body>
 </html>

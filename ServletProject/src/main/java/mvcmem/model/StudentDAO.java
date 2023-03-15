@@ -338,10 +338,10 @@ public class StudentDAO {
 	
 	
 	/*
-	 * 회원탈퇴 버튼을 클릭했을 경우 실제 데이터베이스에서 회원데이터가 삭제되야함
+	 * 회원탈퇴 버튼을 클릭했을 경우 실제 데이터베이스에서 회원데이터가 삭제되어야 함
 	 * 데이터베이스에서 회원을 삭제처리 할 메소드를 구현
 	 */
-	public int delectMember(String id, String pass) {
+	public int deleteMember(String id, String pass) {
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -392,7 +392,7 @@ public class StudentDAO {
 		}
 		
 		return result;
-	} // end delectMember
+	} // end deleteMember
 	
 	
 }
