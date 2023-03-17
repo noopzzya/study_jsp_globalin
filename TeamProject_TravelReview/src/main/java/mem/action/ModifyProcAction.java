@@ -29,7 +29,7 @@ public class ModifyProcAction implements Action {
 			request.getParameter("email"), 
 			request.getParameter("phone"), 
 			request.getParameter("zipcode"), 
-			request.getParameter("address1"), 
+			request.getParameter("address1"),
 			request.getParameter("address2"),
 			request.getParameter("userlike")
 		);

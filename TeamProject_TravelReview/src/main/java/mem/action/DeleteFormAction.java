@@ -12,7 +12,7 @@ public class DeleteFormAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		// TODO Auto-generated method stub
+		
 		return new ActionForward("/mem/deleteForm.jsp", false);
 	}
 

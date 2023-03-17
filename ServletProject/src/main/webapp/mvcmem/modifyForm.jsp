@@ -97,7 +97,7 @@
 
 	<tr>
 		<td colspan="2" align="center">
-			<input type="button" value="정보수정" onclick="updateCheck()" >&nbsp;&nbsp;
+			<input type="button" value="정보수정" onclick="updateCheck()">&nbsp;&nbsp;
 			<input type="button" value="취소" onclick="javascript:window.location='member.mdo?cmd=login'">
 		</td>
 	</tr>

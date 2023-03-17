@@ -277,10 +277,11 @@ public class MemberDAO {
 				vo.setId(rs.getString("id"));
 				vo.setPass(rs.getString("pass"));
 				vo.setName(rs.getString("name"));
+				vo.setEmail(rs.getString("email"));
 				vo.setPhone(rs.getString("phone"));
-				vo.setEmail(rs.getString("zipcode"));
-				vo.setZipcode(rs.getString("address1"));
-				vo.setZipcode(rs.getString("address2"));
+				vo.setZipcode(rs.getString("zipcode"));
+				vo.setAddress1(rs.getString("address1"));
+				vo.setAddress2(rs.getString("address2"));
 				vo.setUserlike(rs.getString("userlike"));
 			}
 			
