@@ -74,3 +74,12 @@
 
 3월 17, 2023 15:59:41.628 NEW SESSION
 3월 17, 2023 15:59:41.628 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+3월 20, 2023 14:19:49.01 NEW SESSION
+3월 20, 2023 14:19:49.02 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+3월 23, 2023 14:07:53.591 NEW SESSION
+3월 23, 2023 14:07:53.591 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+3월 28, 2023 09:38:17.561 NEW SESSION
+3월 28, 2023 09:38:17.561 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.

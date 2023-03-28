@@ -24,29 +24,29 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value=""/>
+		<item key="selection" value="1bbz142"/>
 		<list key="findhistory">
-			<item value="reset"/>
-			<item value="idCheck"/>
-			<item value="submit"/>
-			<item value="script"/>
-			<item value="글삭제"/>
-			<item value="updateA"/>
-			<item value="updateG"/>
-			<item value="getArticle"/>
-			<item value="DAO"/>
-			<item value="request"/>
-			<item value="한 페이지"/>
-			<item value="검색"/>
-			<item value="getA"/>
-			<item value="get a"/>
-			<item value="end d"/>
+			<item value="1bbz142"/>
+			<item value="1ccl3pq "/>
+			<item value="dzjp62 "/>
+			<item value="1i58pf4 "/>
+			<item value="1ccl3pq"/>
+			<item value=" 1ccl3pq "/>
+			<item value="fhxb3m "/>
+			<item value="1oc1pau "/>
+			<item value="box-"/>
+			<item value="128"/>
+			<item value="7apail "/>
+			<item value="1hbtwy0 "/>
+			<item value="1fttcpj"/>
+			<item value="1c8nox "/>
+			<item value="1268zpe"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="824"/>
+		<item key="DIALOG_X_ORIGIN" value="1001"/>
 		<item key="DIALOG_Y_ORIGIN" value="268"/>
 		<item key="DIALOG_WIDTH" value="288"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
