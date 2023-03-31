@@ -72,6 +72,11 @@ public class ActionFactory {
 		case "mypage":
 			action = new MypageAction();
 			break;	
+	
+		case "searchid":
+			action = new SearchId();
+			break;
+			
 			
 		default:
 			action = new LoginFormAction();

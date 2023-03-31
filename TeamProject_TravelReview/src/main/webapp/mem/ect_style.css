@@ -7,6 +7,10 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
+a {
+	text-decoration: none;
+}
+
 div{  
    	padding-bottom: 10px;	
 }
@@ -27,10 +31,6 @@ div{
     width: 340px;
     margin: 0 auto;
     letter-spacing: -0.6px;
-}
-   
-form {			  	 
-       
 }
    
 input {   
@@ -105,4 +105,8 @@ input {
 	color: #2EA26B;
 	background-color: #fff;
 	border: 1px solid #2EA26B;
+}
+
+.search-header{
+	text-align: center;
 }

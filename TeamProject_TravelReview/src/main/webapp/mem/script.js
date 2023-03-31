@@ -9,6 +9,24 @@ function idCheck(id) {
 	}
 }
 
+function searchId() {	
+	if(document.regForm.name.value == ""){
+		alert("이름을 입력해주세요.");
+		document.regForm.name.focus();
+		return;
+	}
+	
+	if(document.regForm.email.value == ""){
+		alert("이메일을 입력해주세요.");
+		document.regForm.email.focus();
+		return;
+	}
+	
+	url="member.do?cmd=name&email=y";
+	console.log(url)
+	window.open(url, "post", "width=300, height=150");
+}
+
 function zipCheck(){
 	url="member.do?cmd=zipCheck&check=y";
 	window.open(url,"post","toolbar=no, width=500, height=300, directories=no, status=yes, scrollbars=yes, menubar=no");

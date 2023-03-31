@@ -10,7 +10,7 @@
 <meta charset="UTF-8">
 <title>Login</title>
 <link href="ect_style.css" rel="stylesheet" type="text/css">
-
+<script type="text/javascript" src="script.js"></script>
 </head>
 <body>
 
@@ -51,9 +51,9 @@
 	</div>
 	
 	<div class="idpw">
-		<a>아이디 찾기</a>
+		<a href="searchid.jsp">아이디 찾기</a>
 		<span class="spanBorder">|</span>
-		<a>비밀번호 찾기</a>
+		<a onclick="searchPassword(this.form.id.value)">비밀번호 찾기</a>
 	</div>
 	
 	<div>
@@ -70,7 +70,6 @@
 </c:otherwise>
 </c:choose>
 
-<jsp:include page="${pageContext.servletContext.contextPath}/included.jsp" />
 
 </body>
 </html>

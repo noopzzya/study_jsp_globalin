@@ -57,7 +57,7 @@
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
-    <fullyQualifiedTypeName name="mem.model.MemberVO"/>
     <fullyQualifiedTypeName name="mem.model.MemberDAO"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="mem.model.MemberVO"/>
 </qualifiedTypeNameHistroy>

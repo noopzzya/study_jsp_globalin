@@ -24,8 +24,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="1bbz142"/>
+		<item key="selection" value="text"/>
 		<list key="findhistory">
+			<item value="text"/>
 			<item value="1bbz142"/>
 			<item value="1ccl3pq "/>
 			<item value="dzjp62 "/>
@@ -40,7 +41,6 @@
 			<item value="1hbtwy0 "/>
 			<item value="1fttcpj"/>
 			<item value="1c8nox "/>
-			<item value="1268zpe"/>
 		</list>
 		<list key="replacehistory">
 		</list>

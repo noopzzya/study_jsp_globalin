@@ -405,5 +405,50 @@ public class MemberDAO {
 		
 		return result;
 	} // end deleteMember
+
+	// searchId
+	public String searchId(String name, String email) {
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		String id = null;
+		
+		try {
+			
+			conn = getConnection();
+			
+			String sql = "select id from member where name=? and email=?";
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, name);
+			pstmt.setString(2, email);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next())
+				id = rs.getString("member.id");
+			
+		} catch (Exception ss) {
+			ss.printStackTrace();
+		} finally {
+			if(rs != null)
+				try{
+					rs.close();
+				}catch(SQLException ex){}
+			
+			if(pstmt != null)
+				try{
+					pstmt.close();
+				}catch(SQLException ex){}
+			
+			if(conn != null)
+				try{
+					conn.close();
+				}catch(SQLException ex){}
+		}
+		
+		return id;
+	} // end searchId
 	
 }
