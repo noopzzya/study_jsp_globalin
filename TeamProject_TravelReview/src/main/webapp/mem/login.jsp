@@ -19,7 +19,6 @@
 	<div class="loginok">
 	
 	<c:out value="${loginID}"/>님 환영합니다.<br><br>
-	<jsp:include page="${pageContext.servletContext.contextPath}/included.jsp" />
 		<a href="mem.do?cmd=logout" class="button">로그아웃</a>
 		<a href="mem.do?cmd=mypage" class="button">마이페이지</a>
 	</div>
@@ -53,7 +52,7 @@
 	<div class="idpw">
 		<a href="searchid.jsp">아이디 찾기</a>
 		<span class="spanBorder">|</span>
-		<a onclick="searchPassword(this.form.id.value)">비밀번호 찾기</a>
+		<a href="searchpass.jsp">비밀번호 찾기</a>
 	</div>
 	
 	<div>

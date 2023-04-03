@@ -427,7 +427,7 @@ public class MemberDAO {
 			rs = pstmt.executeQuery();
 			
 			if(rs.next())
-				id = rs.getString("member.id");
+				id = rs.getString("id");
 			
 		} catch (Exception ss) {
 			ss.printStackTrace();
@@ -451,4 +451,53 @@ public class MemberDAO {
 		return id;
 	} // end searchId
 	
+	// searchPass
+		public String searchPass(String name, String email, String id) {
+			
+			Connection conn = null;
+			PreparedStatement pstmt = null;
+			ResultSet rs = null;
+			
+			String pass = null;
+			
+			try {
+				
+				conn = getConnection();
+				
+				String sql = "select pass from member where name=? and email=? and id=?";
+				pstmt = conn.prepareStatement(sql);
+				
+				pstmt.setString(1, name);
+				pstmt.setString(2, email);
+				pstmt.setString(3, id);
+				rs = pstmt.executeQuery();
+				
+				System.out.println(name);
+				System.out.println(email);
+				System.out.println(id);
+				
+				if(rs.next())
+					pass = rs.getString("pass");
+				
+			} catch (Exception ss) {
+				ss.printStackTrace();
+			} finally {
+				if(rs != null)
+					try{
+						rs.close();
+					}catch(SQLException ex){}
+				
+				if(pstmt != null)
+					try{
+						pstmt.close();
+					}catch(SQLException ex){}
+				
+				if(conn != null)
+					try{
+						conn.close();
+					}catch(SQLException ex){}
+			}
+			
+			return pass;
+		} // end searchPass
 }

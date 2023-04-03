@@ -10,21 +10,46 @@ function idCheck(id) {
 }
 
 function searchId() {	
-	if(document.regForm.name.value == ""){
+	if(document.idproc.name.value == ""){
 		alert("이름을 입력해주세요.");
-		document.regForm.name.focus();
-		return;
+		document.idproc.name.focus();
+		return false;
 	}
 	
-	if(document.regForm.email.value == ""){
+	if(document.idproc.email.value == ""){
 		alert("이메일을 입력해주세요.");
-		document.regForm.email.focus();
-		return;
+		document.idproc.email.focus();
+		return false;
 	}
 	
-	url="member.do?cmd=name&email=y";
-	console.log(url)
-	window.open(url, "post", "width=300, height=150");
+	document.idproc.submit();	
+}
+
+function searchPass() {	
+	if(document.passproc.name.value == ""){
+		alert("이름을 입력해주세요.");
+		document.passproc.name.focus();
+		return false;
+	}
+	
+	if(document.passproc.email.value == ""){
+		alert("이메일을 입력해주세요.");
+		document.passproc.email.focus();
+		return false;
+	}
+	
+	if(document.passproc.id.value == ""){
+		alert("아이디를 입력해주세요.");
+		document.passproc.id.focus();
+		return false;
+	}
+	
+	document.passproc.submit();	
+}
+
+function idpopup(){
+	//window.open("[팝업을 띄울 파일명 path]", "[별칭]", "[팝업 옵션]")
+	window.open("searchidProc.jsp", "idpopup", "width=450, height=250, top=150, left=200");
 }
 
 function zipCheck(){

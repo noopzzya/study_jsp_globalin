@@ -4,13 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>아이디 찾기</title>
+<title>비밀번호 찾기</title>
 <link href="ect_style.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
 
-<form action="mem.do?cmd=searchid" name="idproc" method="post">
+<form action="mem.do?cmd=searchpass" name="passproc" method="post">
 	<div class="search-header">
 		<h2>아이디 찾기</h2>
 	</div>
@@ -26,9 +26,13 @@
 		<div>
 			<input type="text" name="email" value="" placeholder="이메일을 입력해주세요">
 		</div>
+		
+		<div>
+			<input type="text" name="id" value="" placeholder="아이디를 입력해주세요">
+		</div>
 
 		<div>
-			<input class="bt3" type="submit" value="ID찾기" onclick="return searchId();"> 
+			<input class="bt3" type="submit" value="PW찾기" onclick="return searchPass();"> 
 			<input class="bt3" type="button" value="취소"
 				onclick="javascript:window.location.href='member.do?cmd=login'">
 		</div>

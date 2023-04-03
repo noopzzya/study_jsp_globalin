@@ -76,7 +76,10 @@ public class ActionFactory {
 		case "searchid":
 			action = new SearchId();
 			break;
-			
+		
+		case "searchpass":
+			action = new SearchPass();
+			break;
 			
 		default:
 			action = new LoginFormAction();
