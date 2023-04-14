@@ -1087,3 +1087,9 @@
 4월 03, 2023 15:43:48.690 [8068:1164:0403/154348.688:ERROR:CONSOLE(6)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/panels/console/console.js (6)
 4월 03, 2023 15:52:33.987 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
 4월 03, 2023 16:18:11.801 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+4월 06, 2023 13:58:07.828 NEW SESSION
+4월 06, 2023 13:58:07.828 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+4월 12, 2023 10:10:09.701 NEW SESSION
+4월 12, 2023 10:10:09.701 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
